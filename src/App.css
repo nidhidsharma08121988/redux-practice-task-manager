@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  margin: 0px;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container,
+.add-form-container {
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* task list component */
+.tasklist-container,
+.add-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  align-self: center;
+  padding: 1rem;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+.tasks-list {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+/* task component */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  margin-bottom: 1rem;
+  background-color: whitesmoke;
+  padding: 1rem;
+  align-self: center;
+}
+
+.completed {
+  border-left: 2px solid green;
+}
+
+.btn {
+  align-self: center;
+  width: 100%;
+}
+
+.form-item {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
 }
